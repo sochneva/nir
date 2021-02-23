@@ -19,26 +19,25 @@ namespace nir
 
             string filename = AppDomain.CurrentDomain.BaseDirectory + @"DataFiles\p-Gr.txt";
             double[,] a = FileManager.ReadFromFile(filename);
-
-            trackBar5.Minimum = 0;
-            trackBar5.Maximum = 100;
-            trackBar5.TickFrequency = 10;
+            dPinTrackBar.Minimum = 0;
+            dPinTrackBar.Maximum = 100;
+            dPinTrackBar.TickFrequency = 10;
             dPinMin.Text = a[0,0].ToString();
             dPinMax.Text = a[0, a.GetLength(1) - 1].ToString();
             dPinCur.Text = a[0, 0].ToString();            
         }
-
-        private void trackBarChange(object sender, EventArgs e)
+        private void tTrackBar_Scroll(object sender, EventArgs e)
         {
-            TrackBar trackBar = (TrackBar)sender;
-            gtuModel.updateParam(trackBar.Name, trackBar.Value);
+
         }
 
-        private void trackBar5_Scroll(object sender, EventArgs e)
+        private void dPinTrackBar_Scroll(object sender, EventArgs e)
         {
             string filename = AppDomain.CurrentDomain.BaseDirectory + @"DataFiles\p-Gr.txt";
             double[,] a = FileManager.ReadFromFile(filename);
-            dPinCur.Text = (a[0,0] + trackBar5.Value * (a[0, a.GetLength(1) - 1] - a[0, 0]) / trackBar5.Maximum).ToString();
+            dPinCur.Text = (a[0, 0] + dPinTrackBar.Value * (a[0, a.GetLength(1) - 1] - a[0, 0]) / dPinTrackBar.Maximum).ToString();
         }
+
+        
     }
 }

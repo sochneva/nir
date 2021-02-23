@@ -28,222 +28,233 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.trackBar2 = new System.Windows.Forms.TrackBar();
-            this.trackBar3 = new System.Windows.Forms.TrackBar();
-            this.trackBar4 = new System.Windows.Forms.TrackBar();
-            this.trackBar5 = new System.Windows.Forms.TrackBar();
-            this.trackBar6 = new System.Windows.Forms.TrackBar();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tTrackBar = new System.Windows.Forms.TrackBar();
+            this.t = new System.Windows.Forms.Label();
+            this.Tnv = new System.Windows.Forms.Label();
+            this.Pnv = new System.Windows.Forms.Label();
+            this.Ngtu = new System.Windows.Forms.Label();
+            this.dPin = new System.Windows.Forms.Label();
+            this.dPout = new System.Windows.Forms.Label();
+            this.TnvTrackBar = new System.Windows.Forms.TrackBar();
+            this.PnvTrackBar = new System.Windows.Forms.TrackBar();
+            this.NgtuTrackBar = new System.Windows.Forms.TrackBar();
+            this.dPinTrackBar = new System.Windows.Forms.TrackBar();
+            this.dPoutTrackBar = new System.Windows.Forms.TrackBar();
+            this.N = new System.Windows.Forms.Label();
+            this.Nu = new System.Windows.Forms.Label();
+            this.G = new System.Windows.Forms.Label();
+            this.Tout = new System.Windows.Forms.Label();
+            this.B = new System.Windows.Forms.Label();
+            this.NTextBox = new System.Windows.Forms.TextBox();
+            this.NuTextBox = new System.Windows.Forms.TextBox();
+            this.GTextBox = new System.Windows.Forms.TextBox();
+            this.ToutTextBox = new System.Windows.Forms.TextBox();
+            this.BTextBox = new System.Windows.Forms.TextBox();
             this.dPinMin = new System.Windows.Forms.Label();
             this.dPinMax = new System.Windows.Forms.Label();
             this.dPinCur = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).BeginInit();
+            this.tMin = new System.Windows.Forms.Label();
+            this.tMax = new System.Windows.Forms.Label();
+            this.TnvMin = new System.Windows.Forms.Label();
+            this.TnvMax = new System.Windows.Forms.Label();
+            this.PnvMin = new System.Windows.Forms.Label();
+            this.PnvMax = new System.Windows.Forms.Label();
+            this.NgtuMin = new System.Windows.Forms.Label();
+            this.NgtuMax = new System.Windows.Forms.Label();
+            this.dPoutMin = new System.Windows.Forms.Label();
+            this.dPoutMax = new System.Windows.Forms.Label();
+            this.tCur = new System.Windows.Forms.Label();
+            this.TnvCur = new System.Windows.Forms.Label();
+            this.PnvCur = new System.Windows.Forms.Label();
+            this.NgtuCur = new System.Windows.Forms.Label();
+            this.dPoutCur = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.tTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TnvTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PnvTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NgtuTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dPinTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dPoutTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
-            // trackBar1
+            // tTrackBar
             // 
-            this.trackBar1.Location = new System.Drawing.Point(230, 9);
-            this.trackBar1.Maximum = 100;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(199, 45);
-            this.trackBar1.TabIndex = 0;
-            this.trackBar1.TickFrequency = 10;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBarChange);
+            this.tTrackBar.Location = new System.Drawing.Point(230, 9);
+            this.tTrackBar.Maximum = 12000;
+            this.tTrackBar.Name = "tTrackBar";
+            this.tTrackBar.Size = new System.Drawing.Size(199, 45);
+            this.tTrackBar.TabIndex = 0;
+            this.tTrackBar.TickFrequency = 1000;
+            this.tTrackBar.Scroll += new System.EventHandler(this.tTrackBar_Scroll);
             // 
-            // label1
+            // t
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Количество часов эксплуатации";
+            this.t.AutoSize = true;
+            this.t.Location = new System.Drawing.Point(12, 12);
+            this.t.Name = "t";
+            this.t.Size = new System.Drawing.Size(171, 13);
+            this.t.TabIndex = 1;
+            this.t.Text = "Количество часов эксплуатации";
             // 
-            // label2
+            // Tnv
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Температура наружного воздуха";
+            this.Tnv.AutoSize = true;
+            this.Tnv.Location = new System.Drawing.Point(12, 63);
+            this.Tnv.Name = "Tnv";
+            this.Tnv.Size = new System.Drawing.Size(174, 13);
+            this.Tnv.TabIndex = 2;
+            this.Tnv.Text = "Температура наружного воздуха";
             // 
-            // label3
+            // Pnv
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 114);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Давление наружного воздуха";
+            this.Pnv.AutoSize = true;
+            this.Pnv.Location = new System.Drawing.Point(12, 114);
+            this.Pnv.Name = "Pnv";
+            this.Pnv.Size = new System.Drawing.Size(158, 13);
+            this.Pnv.TabIndex = 3;
+            this.Pnv.Text = "Давление наружного воздуха";
             // 
-            // label4
+            // Ngtu
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 165);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Нагрузка ГТУ";
+            this.Ngtu.AutoSize = true;
+            this.Ngtu.Location = new System.Drawing.Point(12, 165);
+            this.Ngtu.Name = "Ngtu";
+            this.Ngtu.Size = new System.Drawing.Size(79, 13);
+            this.Ngtu.TabIndex = 4;
+            this.Ngtu.Text = "Нагрузка ГТУ";
             // 
-            // label5
+            // dPin
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 216);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(202, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Потеря давления на входе из турбины";
+            this.dPin.AutoSize = true;
+            this.dPin.Location = new System.Drawing.Point(12, 216);
+            this.dPin.Name = "dPin";
+            this.dPin.Size = new System.Drawing.Size(202, 13);
+            this.dPin.TabIndex = 5;
+            this.dPin.Text = "Потеря давления на входе из турбины";
             // 
-            // label6
+            // dPout
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 267);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(210, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Потеря давления на выходе из турбины";
+            this.dPout.AutoSize = true;
+            this.dPout.Location = new System.Drawing.Point(12, 267);
+            this.dPout.Name = "dPout";
+            this.dPout.Size = new System.Drawing.Size(210, 13);
+            this.dPout.TabIndex = 6;
+            this.dPout.Text = "Потеря давления на выходе из турбины";
             // 
-            // trackBar2
+            // TnvTrackBar
             // 
-            this.trackBar2.Location = new System.Drawing.Point(230, 63);
-            this.trackBar2.Maximum = 100;
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(199, 45);
-            this.trackBar2.TabIndex = 7;
-            this.trackBar2.TickFrequency = 10;
+            this.TnvTrackBar.Location = new System.Drawing.Point(230, 63);
+            this.TnvTrackBar.Name = "TnvTrackBar";
+            this.TnvTrackBar.Size = new System.Drawing.Size(199, 45);
+            this.TnvTrackBar.TabIndex = 7;
             // 
-            // trackBar3
+            // PnvTrackBar
             // 
-            this.trackBar3.Location = new System.Drawing.Point(230, 114);
-            this.trackBar3.Maximum = 100;
-            this.trackBar3.Name = "trackBar3";
-            this.trackBar3.Size = new System.Drawing.Size(199, 45);
-            this.trackBar3.TabIndex = 8;
-            this.trackBar3.TickFrequency = 10;
+            this.PnvTrackBar.Location = new System.Drawing.Point(230, 114);
+            this.PnvTrackBar.Name = "PnvTrackBar";
+            this.PnvTrackBar.Size = new System.Drawing.Size(199, 45);
+            this.PnvTrackBar.TabIndex = 8;
             // 
-            // trackBar4
+            // NgtuTrackBar
             // 
-            this.trackBar4.Location = new System.Drawing.Point(230, 165);
-            this.trackBar4.Name = "trackBar4";
-            this.trackBar4.Size = new System.Drawing.Size(199, 45);
-            this.trackBar4.TabIndex = 9;
+            this.NgtuTrackBar.Location = new System.Drawing.Point(230, 165);
+            this.NgtuTrackBar.Name = "NgtuTrackBar";
+            this.NgtuTrackBar.Size = new System.Drawing.Size(199, 45);
+            this.NgtuTrackBar.TabIndex = 9;
             // 
-            // trackBar5
+            // dPinTrackBar
             // 
-            this.trackBar5.Location = new System.Drawing.Point(230, 216);
-            this.trackBar5.Name = "trackBar5";
-            this.trackBar5.Size = new System.Drawing.Size(199, 45);
-            this.trackBar5.TabIndex = 10;
-            this.trackBar5.Scroll += new System.EventHandler(this.trackBar5_Scroll);
+            this.dPinTrackBar.Location = new System.Drawing.Point(230, 216);
+            this.dPinTrackBar.Name = "dPinTrackBar";
+            this.dPinTrackBar.Size = new System.Drawing.Size(199, 45);
+            this.dPinTrackBar.TabIndex = 10;
+            this.dPinTrackBar.Scroll += new System.EventHandler(this.dPinTrackBar_Scroll);
             // 
-            // trackBar6
+            // dPoutTrackBar
             // 
-            this.trackBar6.Location = new System.Drawing.Point(230, 267);
-            this.trackBar6.Name = "trackBar6";
-            this.trackBar6.Size = new System.Drawing.Size(199, 45);
-            this.trackBar6.TabIndex = 11;
+            this.dPoutTrackBar.Location = new System.Drawing.Point(230, 267);
+            this.dPoutTrackBar.Name = "dPoutTrackBar";
+            this.dPoutTrackBar.Size = new System.Drawing.Size(199, 45);
+            this.dPoutTrackBar.TabIndex = 11;
             // 
-            // label7
+            // N
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(517, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(199, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Электрическая мощность ГТУ брутто";
+            this.N.AutoSize = true;
+            this.N.Location = new System.Drawing.Point(517, 12);
+            this.N.Name = "N";
+            this.N.Size = new System.Drawing.Size(199, 13);
+            this.N.TabIndex = 12;
+            this.N.Text = "Электрическая мощность ГТУ брутто";
             // 
-            // label8
+            // Nu
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(517, 63);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(225, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "КПД по выработке электроэнергии брутто";
+            this.Nu.AutoSize = true;
+            this.Nu.Location = new System.Drawing.Point(517, 63);
+            this.Nu.Name = "Nu";
+            this.Nu.Size = new System.Drawing.Size(225, 13);
+            this.Nu.TabIndex = 13;
+            this.Nu.Text = "КПД по выработке электроэнергии брутто";
             // 
-            // label9
+            // G
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(517, 114);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(225, 13);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Расход газов на выхлопе газовой турбины";
+            this.G.AutoSize = true;
+            this.G.Location = new System.Drawing.Point(517, 114);
+            this.G.Name = "G";
+            this.G.Size = new System.Drawing.Size(225, 13);
+            this.G.TabIndex = 14;
+            this.G.Text = "Расход газов на выхлопе газовой турбины";
             // 
-            // label10
+            // Tout
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(517, 165);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(256, 13);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "Температура газов на выхлопе газовой турбины";
+            this.Tout.AutoSize = true;
+            this.Tout.Location = new System.Drawing.Point(517, 165);
+            this.Tout.Name = "Tout";
+            this.Tout.Size = new System.Drawing.Size(256, 13);
+            this.Tout.TabIndex = 15;
+            this.Tout.Text = "Температура газов на выхлопе газовой турбины";
             // 
-            // label11
+            // B
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(517, 216);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(131, 13);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Расход природного газа";
+            this.B.AutoSize = true;
+            this.B.Location = new System.Drawing.Point(517, 216);
+            this.B.Name = "B";
+            this.B.Size = new System.Drawing.Size(131, 13);
+            this.B.TabIndex = 16;
+            this.B.Text = "Расход природного газа";
             // 
-            // textBox1
+            // NTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(779, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 17;
+            this.NTextBox.Location = new System.Drawing.Point(779, 9);
+            this.NTextBox.Name = "NTextBox";
+            this.NTextBox.Size = new System.Drawing.Size(100, 20);
+            this.NTextBox.TabIndex = 17;
             // 
-            // textBox2
+            // NuTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(779, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 18;
+            this.NuTextBox.Location = new System.Drawing.Point(779, 60);
+            this.NuTextBox.Name = "NuTextBox";
+            this.NuTextBox.Size = new System.Drawing.Size(100, 20);
+            this.NuTextBox.TabIndex = 18;
             // 
-            // textBox3
+            // GTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(779, 111);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 19;
+            this.GTextBox.Location = new System.Drawing.Point(779, 111);
+            this.GTextBox.Name = "GTextBox";
+            this.GTextBox.Size = new System.Drawing.Size(100, 20);
+            this.GTextBox.TabIndex = 19;
             // 
-            // textBox4
+            // ToutTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(779, 162);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 20;
+            this.ToutTextBox.Location = new System.Drawing.Point(779, 162);
+            this.ToutTextBox.Name = "ToutTextBox";
+            this.ToutTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ToutTextBox.TabIndex = 20;
             // 
-            // textBox5
+            // BTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(779, 213);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 21;
+            this.BTextBox.Location = new System.Drawing.Point(779, 213);
+            this.BTextBox.Name = "BTextBox";
+            this.BTextBox.Size = new System.Drawing.Size(100, 20);
+            this.BTextBox.TabIndex = 21;
             // 
             // dPinMin
             // 
@@ -272,44 +283,194 @@
             this.dPinCur.TabIndex = 24;
             this.dPinCur.Text = "0";
             // 
+            // tMin
+            // 
+            this.tMin.AutoSize = true;
+            this.tMin.Location = new System.Drawing.Point(227, 41);
+            this.tMin.Name = "tMin";
+            this.tMin.Size = new System.Drawing.Size(41, 13);
+            this.tMin.TabIndex = 25;
+            this.tMin.Text = "label12";
+            // 
+            // tMax
+            // 
+            this.tMax.AutoSize = true;
+            this.tMax.Location = new System.Drawing.Point(388, 41);
+            this.tMax.Name = "tMax";
+            this.tMax.Size = new System.Drawing.Size(41, 13);
+            this.tMax.TabIndex = 26;
+            this.tMax.Text = "label13";
+            // 
+            // TnvMin
+            // 
+            this.TnvMin.AutoSize = true;
+            this.TnvMin.Location = new System.Drawing.Point(227, 95);
+            this.TnvMin.Name = "TnvMin";
+            this.TnvMin.Size = new System.Drawing.Size(41, 13);
+            this.TnvMin.TabIndex = 27;
+            this.TnvMin.Text = "label14";
+            // 
+            // TnvMax
+            // 
+            this.TnvMax.AutoSize = true;
+            this.TnvMax.Location = new System.Drawing.Point(388, 95);
+            this.TnvMax.Name = "TnvMax";
+            this.TnvMax.Size = new System.Drawing.Size(41, 13);
+            this.TnvMax.TabIndex = 28;
+            this.TnvMax.Text = "label15";
+            // 
+            // PnvMin
+            // 
+            this.PnvMin.AutoSize = true;
+            this.PnvMin.Location = new System.Drawing.Point(227, 146);
+            this.PnvMin.Name = "PnvMin";
+            this.PnvMin.Size = new System.Drawing.Size(41, 13);
+            this.PnvMin.TabIndex = 29;
+            this.PnvMin.Text = "label16";
+            // 
+            // PnvMax
+            // 
+            this.PnvMax.AutoSize = true;
+            this.PnvMax.Location = new System.Drawing.Point(388, 146);
+            this.PnvMax.Name = "PnvMax";
+            this.PnvMax.Size = new System.Drawing.Size(41, 13);
+            this.PnvMax.TabIndex = 30;
+            this.PnvMax.Text = "label17";
+            // 
+            // NgtuMin
+            // 
+            this.NgtuMin.AutoSize = true;
+            this.NgtuMin.Location = new System.Drawing.Point(227, 197);
+            this.NgtuMin.Name = "NgtuMin";
+            this.NgtuMin.Size = new System.Drawing.Size(41, 13);
+            this.NgtuMin.TabIndex = 31;
+            this.NgtuMin.Text = "label18";
+            // 
+            // NgtuMax
+            // 
+            this.NgtuMax.AutoSize = true;
+            this.NgtuMax.Location = new System.Drawing.Point(388, 197);
+            this.NgtuMax.Name = "NgtuMax";
+            this.NgtuMax.Size = new System.Drawing.Size(41, 13);
+            this.NgtuMax.TabIndex = 32;
+            this.NgtuMax.Text = "label19";
+            // 
+            // dPoutMin
+            // 
+            this.dPoutMin.AutoSize = true;
+            this.dPoutMin.Location = new System.Drawing.Point(227, 299);
+            this.dPoutMin.Name = "dPoutMin";
+            this.dPoutMin.Size = new System.Drawing.Size(41, 13);
+            this.dPoutMin.TabIndex = 33;
+            this.dPoutMin.Text = "label20";
+            // 
+            // dPoutMax
+            // 
+            this.dPoutMax.AutoSize = true;
+            this.dPoutMax.Location = new System.Drawing.Point(388, 299);
+            this.dPoutMax.Name = "dPoutMax";
+            this.dPoutMax.Size = new System.Drawing.Size(41, 13);
+            this.dPoutMax.TabIndex = 34;
+            this.dPoutMax.Text = "label21";
+            // 
+            // tCur
+            // 
+            this.tCur.AutoSize = true;
+            this.tCur.Location = new System.Drawing.Point(309, 41);
+            this.tCur.Name = "tCur";
+            this.tCur.Size = new System.Drawing.Size(13, 13);
+            this.tCur.TabIndex = 35;
+            this.tCur.Text = "0";
+            // 
+            // TnvCur
+            // 
+            this.TnvCur.AutoSize = true;
+            this.TnvCur.Location = new System.Drawing.Point(309, 98);
+            this.TnvCur.Name = "TnvCur";
+            this.TnvCur.Size = new System.Drawing.Size(13, 13);
+            this.TnvCur.TabIndex = 36;
+            this.TnvCur.Text = "0";
+            // 
+            // PnvCur
+            // 
+            this.PnvCur.AutoSize = true;
+            this.PnvCur.Location = new System.Drawing.Point(309, 149);
+            this.PnvCur.Name = "PnvCur";
+            this.PnvCur.Size = new System.Drawing.Size(13, 13);
+            this.PnvCur.TabIndex = 37;
+            this.PnvCur.Text = "0";
+            // 
+            // NgtuCur
+            // 
+            this.NgtuCur.AutoSize = true;
+            this.NgtuCur.Location = new System.Drawing.Point(309, 197);
+            this.NgtuCur.Name = "NgtuCur";
+            this.NgtuCur.Size = new System.Drawing.Size(13, 13);
+            this.NgtuCur.TabIndex = 38;
+            this.NgtuCur.Text = "0";
+            // 
+            // dPoutCur
+            // 
+            this.dPoutCur.AutoSize = true;
+            this.dPoutCur.Location = new System.Drawing.Point(309, 299);
+            this.dPoutCur.Name = "dPoutCur";
+            this.dPoutCur.Size = new System.Drawing.Size(13, 13);
+            this.dPoutCur.TabIndex = 39;
+            this.dPoutCur.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(891, 320);
+            this.Controls.Add(this.dPoutCur);
+            this.Controls.Add(this.NgtuCur);
+            this.Controls.Add(this.PnvCur);
+            this.Controls.Add(this.TnvCur);
+            this.Controls.Add(this.tCur);
+            this.Controls.Add(this.dPoutMax);
+            this.Controls.Add(this.dPoutMin);
+            this.Controls.Add(this.NgtuMax);
+            this.Controls.Add(this.NgtuMin);
+            this.Controls.Add(this.PnvMax);
+            this.Controls.Add(this.PnvMin);
+            this.Controls.Add(this.TnvMax);
+            this.Controls.Add(this.TnvMin);
+            this.Controls.Add(this.tMax);
+            this.Controls.Add(this.tMin);
             this.Controls.Add(this.dPinCur);
             this.Controls.Add(this.dPinMax);
             this.Controls.Add(this.dPinMin);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.trackBar6);
-            this.Controls.Add(this.trackBar5);
-            this.Controls.Add(this.trackBar4);
-            this.Controls.Add(this.trackBar3);
-            this.Controls.Add(this.trackBar2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.BTextBox);
+            this.Controls.Add(this.ToutTextBox);
+            this.Controls.Add(this.GTextBox);
+            this.Controls.Add(this.NuTextBox);
+            this.Controls.Add(this.NTextBox);
+            this.Controls.Add(this.B);
+            this.Controls.Add(this.Tout);
+            this.Controls.Add(this.G);
+            this.Controls.Add(this.Nu);
+            this.Controls.Add(this.N);
+            this.Controls.Add(this.dPoutTrackBar);
+            this.Controls.Add(this.dPinTrackBar);
+            this.Controls.Add(this.NgtuTrackBar);
+            this.Controls.Add(this.PnvTrackBar);
+            this.Controls.Add(this.TnvTrackBar);
+            this.Controls.Add(this.dPout);
+            this.Controls.Add(this.dPin);
+            this.Controls.Add(this.Ngtu);
+            this.Controls.Add(this.Pnv);
+            this.Controls.Add(this.Tnv);
+            this.Controls.Add(this.t);
+            this.Controls.Add(this.tTrackBar);
             this.Name = "Form1";
             this.Text = "Расчет ГТУ";
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TnvTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PnvTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NgtuTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dPinTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dPoutTrackBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,31 +478,46 @@
 
         #endregion
 
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TrackBar trackBar2;
-        private System.Windows.Forms.TrackBar trackBar3;
-        private System.Windows.Forms.TrackBar trackBar4;
-        private System.Windows.Forms.TrackBar trackBar5;
-        private System.Windows.Forms.TrackBar trackBar6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TrackBar tTrackBar;
+        private System.Windows.Forms.Label t;
+        private System.Windows.Forms.Label Tnv;
+        private System.Windows.Forms.Label Pnv;
+        private System.Windows.Forms.Label Ngtu;
+        private System.Windows.Forms.Label dPin;
+        private System.Windows.Forms.Label dPout;
+        private System.Windows.Forms.TrackBar TnvTrackBar;
+        private System.Windows.Forms.TrackBar PnvTrackBar;
+        private System.Windows.Forms.TrackBar NgtuTrackBar;
+        private System.Windows.Forms.TrackBar dPinTrackBar;
+        private System.Windows.Forms.TrackBar dPoutTrackBar;
+        private System.Windows.Forms.Label N;
+        private System.Windows.Forms.Label Nu;
+        private System.Windows.Forms.Label G;
+        private System.Windows.Forms.Label Tout;
+        private System.Windows.Forms.Label B;
+        private System.Windows.Forms.TextBox NTextBox;
+        private System.Windows.Forms.TextBox NuTextBox;
+        private System.Windows.Forms.TextBox GTextBox;
+        private System.Windows.Forms.TextBox ToutTextBox;
+        private System.Windows.Forms.TextBox BTextBox;
         private System.Windows.Forms.Label dPinMin;
         private System.Windows.Forms.Label dPinMax;
         private System.Windows.Forms.Label dPinCur;
+        private System.Windows.Forms.Label tMin;
+        private System.Windows.Forms.Label tMax;
+        private System.Windows.Forms.Label TnvMin;
+        private System.Windows.Forms.Label TnvMax;
+        private System.Windows.Forms.Label PnvMin;
+        private System.Windows.Forms.Label PnvMax;
+        private System.Windows.Forms.Label NgtuMin;
+        private System.Windows.Forms.Label NgtuMax;
+        private System.Windows.Forms.Label dPoutMin;
+        private System.Windows.Forms.Label dPoutMax;
+        private System.Windows.Forms.Label tCur;
+        private System.Windows.Forms.Label TnvCur;
+        private System.Windows.Forms.Label PnvCur;
+        private System.Windows.Forms.Label NgtuCur;
+        private System.Windows.Forms.Label dPoutCur;
     }
 }
 
