@@ -12,11 +12,14 @@ namespace nir
 {
     public partial class Form1 : Form
     {
+        GTUModel gtuModel = new GTUModel();
         public Form1()
         {
             InitializeComponent();
+
             string filename = AppDomain.CurrentDomain.BaseDirectory + @"DataFiles\p-Gr.txt";
             double[,] a = FileManager.ReadFromFile(filename);
+
             trackBar5.Minimum = 0;
             trackBar5.Maximum = 100;
             trackBar5.TickFrequency = 10;
@@ -25,9 +28,10 @@ namespace nir
             dPinCur.Text = a[0, 0].ToString();            
         }
 
-        private void trackBar1_Scroll(object sender, EventArgs e)
+        private void trackBarChange(object sender, EventArgs e)
         {
-
+            TrackBar trackBar = (TrackBar)sender;
+            gtuModel.updateParam(trackBar.Name, trackBar.Value);
         }
 
         private void trackBar5_Scroll(object sender, EventArgs e)
