@@ -14,6 +14,9 @@ namespace nir
         [STAThread]
         static void Main()
         {
+
+            //Изменения от Никиты
+            //Изменения от Никиты 2
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
