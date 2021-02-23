@@ -50,6 +50,9 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.dPinMin = new System.Windows.Forms.Label();
+            this.dPinMax = new System.Windows.Forms.Label();
+            this.dPinCur = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
@@ -153,6 +156,7 @@
             this.trackBar5.Name = "trackBar5";
             this.trackBar5.Size = new System.Drawing.Size(199, 45);
             this.trackBar5.TabIndex = 10;
+            this.trackBar5.Scroll += new System.EventHandler(this.trackBar5_Scroll);
             // 
             // trackBar6
             // 
@@ -164,7 +168,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(435, 12);
+            this.label7.Location = new System.Drawing.Point(517, 12);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(199, 13);
             this.label7.TabIndex = 12;
@@ -173,7 +177,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(435, 63);
+            this.label8.Location = new System.Drawing.Point(517, 63);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(225, 13);
             this.label8.TabIndex = 13;
@@ -182,7 +186,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(435, 114);
+            this.label9.Location = new System.Drawing.Point(517, 114);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(225, 13);
             this.label9.TabIndex = 14;
@@ -191,7 +195,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(435, 165);
+            this.label10.Location = new System.Drawing.Point(517, 165);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(256, 13);
             this.label10.TabIndex = 15;
@@ -200,7 +204,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(435, 216);
+            this.label11.Location = new System.Drawing.Point(517, 216);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(131, 13);
             this.label11.TabIndex = 16;
@@ -208,44 +212,74 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(697, 9);
+            this.textBox1.Location = new System.Drawing.Point(779, 9);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 17;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(697, 60);
+            this.textBox2.Location = new System.Drawing.Point(779, 60);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 18;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(697, 111);
+            this.textBox3.Location = new System.Drawing.Point(779, 111);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 19;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(697, 162);
+            this.textBox4.Location = new System.Drawing.Point(779, 162);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 20;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(697, 213);
+            this.textBox5.Location = new System.Drawing.Point(779, 213);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 21;
+            // 
+            // dPinMin
+            // 
+            this.dPinMin.AutoSize = true;
+            this.dPinMin.Location = new System.Drawing.Point(227, 248);
+            this.dPinMin.Name = "dPinMin";
+            this.dPinMin.Size = new System.Drawing.Size(41, 13);
+            this.dPinMin.TabIndex = 22;
+            this.dPinMin.Text = "label12";
+            // 
+            // dPinMax
+            // 
+            this.dPinMax.AutoSize = true;
+            this.dPinMax.Location = new System.Drawing.Point(388, 248);
+            this.dPinMax.Name = "dPinMax";
+            this.dPinMax.Size = new System.Drawing.Size(41, 13);
+            this.dPinMax.TabIndex = 23;
+            this.dPinMax.Text = "label13";
+            // 
+            // dPinCur
+            // 
+            this.dPinCur.AutoSize = true;
+            this.dPinCur.Location = new System.Drawing.Point(309, 248);
+            this.dPinCur.Name = "dPinCur";
+            this.dPinCur.Size = new System.Drawing.Size(13, 13);
+            this.dPinCur.TabIndex = 24;
+            this.dPinCur.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 320);
+            this.ClientSize = new System.Drawing.Size(891, 320);
+            this.Controls.Add(this.dPinCur);
+            this.Controls.Add(this.dPinMax);
+            this.Controls.Add(this.dPinMin);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -305,6 +339,9 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label dPinMin;
+        private System.Windows.Forms.Label dPinMax;
+        private System.Windows.Forms.Label dPinCur;
     }
 }
 
