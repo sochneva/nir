@@ -12,9 +12,11 @@ namespace nir
 {
     public partial class Form1 : Form
     {
+        GTUModel gtuModel = new GTUModel();
         public Form1()
         {
             InitializeComponent();
+
             string filename = AppDomain.CurrentDomain.BaseDirectory + @"DataFiles\p-Gr.txt";
             double[,] a = FileManager.ReadFromFile(filename);
             dPinTrackBar.Minimum = 0;
