@@ -15,6 +15,8 @@ namespace nir
         public Form1()
         {
             InitializeComponent();
+            string filename = AppDomain.CurrentDomain.BaseDirectory + @"DataFiles\p-Gr.txt";
+            double[,] a = FileManager.ReadFromFile(filename);
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
