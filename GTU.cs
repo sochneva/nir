@@ -11,6 +11,7 @@ namespace nir
         public double t;
         public double Ngtu;
         public double Tnv;
+        public double Pnv;
         public double dPin;
         public double dPout;
     }
@@ -28,26 +29,37 @@ namespace nir
     public class GTU
     {
         private outParam outParam;
-
+        /*
         public double calcN(inParam inParam)
         {
-
-            return outParam.N;
+            return outParam.N * Interpolation(t) * Interpolation(Ngtu) * Interpolation(Tnv) * Interpolation(Pnv) * Interpolation(dPin) * Interpolation(dPout);
         }
-        public double Interpolation(double x, double x1, double x2, double y1, double y2)
-        {
-            double[][] arr;
-            for(int i = 0; i < arr.GetLength(0); i++)
-            {
-                if (x > arr[0][i]) continue;
-                x1 = arr[0][i - 1];
-                x2 = arr[0][i];
-                y1 = arr[1][i - 1];
-                y2 = arr[1][i];
-                break;
-            }
 
-            return (y2 - y1) / (x2 - x1) * (x - x1) + y1;
+        public double calcNu(inParam inParam)
+        {
+            return outParam.Nu * Interpolation(t) * Interpolation(Ngtu) * Interpolation(Tnv) * Interpolation(dPin) * Interpolation(dPout);
+        }
+
+        public double calcG(inParam inParam)
+        {
+            return outParam.G * Interpolation(Ngtu) * Interpolation(Tnv) * Interpolation(Pnv) * Interpolation(dPin) * Interpolation(dPout);
+        }
+
+        public double calcT(inParam inParam)
+        {
+            return outParam.T * Interpolation(Ngtu) * Interpolation(Tnv) * Interpolation(dPin) * Interpolation(dPout);
+        }
+
+        public double calcB(outParam outParam)
+        {
+            return outParam.N / (outParam.Q * outParam.Nu);
+        }
+        */
+        public double Interpolation(double x, double[,] arr)
+        {
+            int i = 0;
+            while (x > arr[0, i]) i++;
+            return (arr[1, i] - arr[1, i - 1]) / (arr[0, i] - arr[0, i - 1]) * (x - arr[0, i - 1]) + arr[1, i - 1];
         }
 
     }
