@@ -23,7 +23,7 @@ namespace nir
         }
     }
 
-    struct inParam
+    public struct inParam
     {
         public double t;
         public double Ngtu;
@@ -41,7 +41,7 @@ namespace nir
         private double B;   //Расход природного газа
         private double Q;   //Низшая теплота сгорания топлива
 
-        public double calcN(double t, double Ngtu, double Tnv, double dPin, double dPout)
+        public double calcN(inParam inParam)
         {
 
             return 1.0;
