@@ -54,7 +54,6 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GTUModel.cs" />
-    <Compile Include="GTU.cs" />
     <Compile Include="ModelData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,43 +84,46 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataFiles\etc%28t%29.txt">
+    <Content Include="DataFiles\G%28dPin%29.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DataFiles\N%28t%29.txt">
+    <Content Include="DataFiles\G%28Ngtu%29.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DataFiles\N-eta.txt">
+    <Content Include="DataFiles\N%28dPin%29.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DataFiles\N-Gr.txt">
+    <Content Include="DataFiles\N%28Tnv%29.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DataFiles\N-tr.txt">
+    <Content Include="DataFiles\N,G%28Pnv%29.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DataFiles\p-Gr.txt">
+    <Content Include="DataFiles\N,Nu%28dPout%29.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DataFiles\p-N,эта.txt">
+    <Content Include="DataFiles\Nu%28dPin%29.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DataFiles\p-N.txt">
+    <Content Include="DataFiles\Nu%28Ngtu%29.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DataFiles\p-tr %282%29.txt">
+    <Content Include="DataFiles\Nu%28Tnv%29.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DataFiles\p-tr.txt">
+    <Content Include="DataFiles\T%28dPin%29.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DataFiles\p-eta.txt">
+    <Content Include="DataFiles\T%28dPout%29.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DataFiles\Patm-Gr_N.txt">
+    <Content Include="DataFiles\T%28Ngtu%29.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DataFiles\T%28t%29.txt">
+    <Content Include="DataFiles\T%28Tnv%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataFiles\t.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

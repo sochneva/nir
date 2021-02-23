@@ -156,7 +156,6 @@
             this.trackBar5.Name = "trackBar5";
             this.trackBar5.Size = new System.Drawing.Size(199, 45);
             this.trackBar5.TabIndex = 10;
-            this.trackBar5.Scroll += new System.EventHandler(this.trackBar5_Scroll);
             // 
             // trackBar6
             // 
@@ -214,6 +213,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(779, 9);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 17;
             // 
@@ -221,6 +221,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(779, 60);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 18;
             // 
@@ -228,6 +229,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(779, 111);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 19;
             // 
@@ -235,6 +237,7 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(779, 162);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 20;
             // 
@@ -242,6 +245,7 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(779, 213);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 21;
             // 
