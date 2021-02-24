@@ -13,12 +13,12 @@ namespace nir
         private Dictionary<string, double[,]> Data { get; set; } = new Dictionary<string, double[,]>();   //данные для расчета
 
         #region inputParam
-        public static double OperatingTime { get; set; }                //Колич. часов экспл., ч
-        public double StrainGTU { get; set; }                           //Нагрузка ГТУ, %
-        public double OutdoorAirTemperature { get; set; }               //Темп. нар. воздуха, °C
-        public double OutdoorAirPressure { get; set; }                  //Давление нар. воздуха, кПа
-        public double PressureLossIn { get; set; }                      //Потери давлен на входе в компр., кПа
-        public double PressureLossOut { get; set; }                     //Потери давлен на вых. ГТ, кПа
+        private static double OperatingTime { get; set; }                //Колич. часов экспл., ч
+        private double StrainGTU { get; set; }                           //Нагрузка ГТУ, %
+        private double OutdoorAirTemperature { get; set; }               //Темп. нар. воздуха, °C
+        private double OutdoorAirPressure { get; set; }                  //Давление нар. воздуха, кПа
+        private double PressureLossIn { get; set; }                      //Потери давлен на входе в компр., кПа
+        private double PressureLossOut { get; set; }                     //Потери давлен на вых. ГТ, кПа
         #endregion
 
         #region outputParam
@@ -37,11 +37,11 @@ namespace nir
         #endregion
 
         #region controlParam
-        public double DefN { get; } = 155.3;      //Электрическая мощность ГТУ брутто
-        public double DefNu { get; } = 98.54;     //Электрический КПД брутто
-        public double DefG { get; } = 509.0;      //Расход выхлопных газов
-        public double DefT { get; } = 537.0;      //Температура выхлопных газов
-        public double DefB                        //Расход природного газа
+        private double DefN { get; } = 155.3;      //Электрическая мощность ГТУ брутто
+        private double DefNu { get; } = 98.54;     //Электрический КПД брутто
+        private double DefG { get; } = 509.0;      //Расход выхлопных газов
+        private double DefT { get; } = 537.0;      //Температура выхлопных газов
+        private double DefB                        //Расход природного газа
         {
             get
             {
@@ -80,59 +80,60 @@ namespace nir
             double newValue = Data[name][0, 0] + value * (Data[name][0, Data[name].GetLength(1) - 1] - Data[name][0, 0]) / 100;
             switch (name)
             {
-                case "trackBar1":
+                case "tTrackBar":
                     OperatingTime = newValue;
                     break;
-                case "trackBar2":
+                case "TnvTrackBar":
                     OutdoorAirTemperature = newValue;
                     break;
-                case "trackBar3":
+                case "PnvTrackBar":
                     OutdoorAirPressure = newValue;
                     break;
-                case "trackBar4":
+                case "NgtuTrackBar":
                     StrainGTU = newValue;
                     break;
-                case "trackBar5":
+                case "dPinTrackBar":
                     PressureLossIn = newValue;
                     break;
-                case "trackBar6":
+                case "dPoutTrackBar":
                     PressureLossOut = newValue;
                     break;
             }
+            
         }
 
         private double calcN()
         {
-            return DefN * Interpolation(OperatingTime, Data["etc(t)"]) * Interpolation(StrainGTU, Data["etc(t)"])
-                * Interpolation(OutdoorAirTemperature, Data["etc(t)"]) * Interpolation(OutdoorAirPressure, Data["etc(t)"])
-                * Interpolation(PressureLossIn, Data["etc(t)"]) * Interpolation(PressureLossOut, Data["etc(t)"]);
+            return DefN * Interpolation(OperatingTime, Data["tTrackBar"]) * Interpolation(StrainGTU, Data["NgtuTrackBar"])
+                * Interpolation(OutdoorAirTemperature, Data["TnvTrackBar"]) * Interpolation(OutdoorAirPressure, Data["PnvTrackBar"])
+                * Interpolation(PressureLossIn, Data["dPinTrackBar"]) * Interpolation(PressureLossOut, Data["dPoutTrackBar"]);
         }
 
         private double calcNu()
         {
-            return DefNu * Interpolation(OperatingTime, Data["etc(t)"]) * Interpolation(StrainGTU, Data["etc(t)"])
-                * Interpolation(OutdoorAirTemperature, Data["etc(t)"]) * Interpolation(PressureLossIn, Data["etc(t)"])
-                * Interpolation(PressureLossOut, Data["etc(t)"]);
+            return DefNu * Interpolation(OperatingTime, Data["tTrackBar"]) * Interpolation(StrainGTU, Data["NgtuTrackBar"])
+                * Interpolation(OutdoorAirTemperature, Data["TnvTrackBar"]) * Interpolation(PressureLossIn, Data["dPinTrackBar"])
+                * Interpolation(PressureLossOut, Data["dPoutTrackBar"]);
         }
 
         private double calcG()
         {
-            return DefG * Interpolation(StrainGTU, Data["etc(t)"]) * Interpolation(OutdoorAirTemperature, Data["etc(t)"])
-                * Interpolation(OutdoorAirPressure, Data["etc(t)"]) * Interpolation(PressureLossIn, Data["etc(t)"])
-                * Interpolation(PressureLossOut, Data["etc(t)"]);
+            return DefG * Interpolation(StrainGTU, Data["tTrackBar"]) * Interpolation(OutdoorAirTemperature, Data["PnvTrackBar"])
+                * Interpolation(OutdoorAirPressure, Data["TnvTrackBar"]) * Interpolation(PressureLossIn, Data["dPinTrackBar"])
+                * Interpolation(PressureLossOut, Data["dPoutTrackBar"]);
         }
 
         private double calcT()
         {
-            return DefT * Interpolation(StrainGTU, Data["etc(t)"]) * Interpolation(OutdoorAirTemperature, Data["etc(t)"])
-                * Interpolation(OutdoorAirPressure, Data["etc(t)"]) * Interpolation(PressureLossIn, Data["etc(t)"]) * Interpolation(PressureLossOut, Data["etc(t)"]);
+            return DefT * Interpolation(StrainGTU, Data["NgtuTrackBar"]) * Interpolation(OutdoorAirTemperature, Data["PnvTrackBar"])
+                * Interpolation(OutdoorAirPressure, Data["TnvTrackBar"]) * Interpolation(PressureLossIn, Data["dPinTrackBar"]) * Interpolation(PressureLossOut, Data["dPoutTrackBar"]);
         }
 
         private double Interpolation(double x, double[,] arr)
         {
             int i = 0;
-            while (x > arr[0, i]) i++;
-            return (arr[1, i] - arr[1, i - 1]) / (arr[0, i] - arr[0, i - 1]) * (x - arr[0, i - 1]) + arr[1, i - 1];
+            while (x > arr[0, i] && i<arr.GetLength(1)-2) i++;
+            return (arr[1, i+1] - arr[1, i]) / (arr[0, i+1] - arr[0, i]) * (x - arr[0, i+1]) + arr[1, i];
         }
     }
 }

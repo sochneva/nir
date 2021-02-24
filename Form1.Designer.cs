@@ -84,7 +84,7 @@
             this.tTrackBar.Size = new System.Drawing.Size(199, 45);
             this.tTrackBar.TabIndex = 0;
             this.tTrackBar.TickFrequency = 1000;
-            this.tTrackBar.Scroll += new System.EventHandler(this.tTrackBar_Scroll);
+            this.tTrackBar.Scroll += new System.EventHandler(this.trackBarChange);
             // 
             // t
             // 
@@ -146,6 +146,7 @@
             this.TnvTrackBar.Name = "TnvTrackBar";
             this.TnvTrackBar.Size = new System.Drawing.Size(199, 45);
             this.TnvTrackBar.TabIndex = 7;
+            this.TnvTrackBar.Scroll += new System.EventHandler(this.trackBarChange);
             // 
             // PnvTrackBar
             // 
@@ -153,6 +154,7 @@
             this.PnvTrackBar.Name = "PnvTrackBar";
             this.PnvTrackBar.Size = new System.Drawing.Size(199, 45);
             this.PnvTrackBar.TabIndex = 8;
+            this.PnvTrackBar.Scroll += new System.EventHandler(this.trackBarChange);
             // 
             // NgtuTrackBar
             // 
@@ -160,6 +162,7 @@
             this.NgtuTrackBar.Name = "NgtuTrackBar";
             this.NgtuTrackBar.Size = new System.Drawing.Size(199, 45);
             this.NgtuTrackBar.TabIndex = 9;
+            this.NgtuTrackBar.Scroll += new System.EventHandler(this.trackBarChange);
             // 
             // dPinTrackBar
             // 
@@ -167,7 +170,7 @@
             this.dPinTrackBar.Name = "dPinTrackBar";
             this.dPinTrackBar.Size = new System.Drawing.Size(199, 45);
             this.dPinTrackBar.TabIndex = 10;
-            this.dPinTrackBar.Scroll += new System.EventHandler(this.dPinTrackBar_Scroll);
+            this.dPinTrackBar.Scroll += new System.EventHandler(this.trackBarChange);
             // 
             // dPoutTrackBar
             // 
@@ -175,6 +178,7 @@
             this.dPoutTrackBar.Name = "dPoutTrackBar";
             this.dPoutTrackBar.Size = new System.Drawing.Size(199, 45);
             this.dPoutTrackBar.TabIndex = 11;
+            this.dPoutTrackBar.Scroll += new System.EventHandler(this.trackBarChange);
             // 
             // N
             // 
